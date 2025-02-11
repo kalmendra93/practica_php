@@ -11,7 +11,6 @@ $outputAge = match (true) {
     $age < 18 => "Eres un adolescente, $name",
     $age === 18 => "Eres mayor de edad, $name",
     $age < 40 => "Eres un adulto joven, $name",
-    $age > 40 => "Eres un adulto, $name",
     default => "Ya mismo rip."
 };
 $bestLanguages = ["PHP", "Java", "JavaScript", "Python"];
