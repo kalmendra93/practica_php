@@ -37,13 +37,20 @@ class SuperHero
         $planets = ["Asgard", "Tierra", "Tierra 65", "Krypton"];
 
         //Te da el valor
-        $name=$names[array_rand($names)];
-        $power=$powers[array_rand($powers)];
-        $planet=$planets[array_rand($planets)];
+        $name = $names[array_rand($names)];
+        $power = $powers[array_rand($powers)];
+        $planet = $planets[array_rand($planets)];
 
-        echo "El superheroe $name, que viene del planeta $planet tiene los siguientes poderes: "
-        . implode(" ,", $power);
+        /*echo "El superheroe $name, que viene del planeta $planet tiene los siguientes poderes: "
+        . implode(" ,",$power);*/
+        return new self($name, $power, $planet);
     }
 }
 
-SuperHero::random();
+//Método estático (con el new self se puede: )
+$hero = SuperHero::random();
+echo $hero->description();
+
+// Instanciar
+/*$hero = new SuperHero("Superman", ["Superfuerza", "visión térmica", "volar"], "Krypton");
+echo $hero->description();*/
