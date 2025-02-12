@@ -19,6 +19,7 @@ class SuperHero
     {
         return get_object_vars($this);
     }
+    
     public function description()
     {
         $powers = implode(", ", $this->powers);
