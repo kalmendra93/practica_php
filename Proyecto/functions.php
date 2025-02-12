@@ -6,7 +6,8 @@ declare(strict_types=1); // <- A nivel de archivo y arriba del todo
 
 function render_template(string $template, array $data = [])
 {
-    require "sections/$template.php";
+    extract ($data);
+    require "templates/$template.php";
 }
 /*Colocamos tipo de variable que esperamos, pero sin el declare(strict_types) puede aceptarnos 
 aun cualquier valor haciendo un casteo de forma transparente*/
