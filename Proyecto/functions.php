@@ -6,7 +6,8 @@ declare(strict_types=1); // <- A nivel de archivo y arriba del todo
 
 function render_template(string $template, array $data = [])
 {
-    extract ($data);
+    //Extract data para que el template pueda acceder a los datos del array
+    extract($data);
     require "templates/$template.php";
 }
 /*Colocamos tipo de variable que esperamos, pero sin el declare(strict_types) puede aceptarnos 
