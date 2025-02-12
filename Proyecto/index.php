@@ -6,11 +6,11 @@ require_once 'functions.php';
 
 $data = get_data(API_URL);
 
-$untilMessage = get_until_message($data["days_until"]);
+$until_message = get_until_message($data["days_until"]);
 ?>
 
 <?php render_template('head', $data); ?>
-<?php render_template('main', $data); ?>
-<?php render_template('style'); ?>
+<?php render_template('main', array_merge($data, ["until_message" => $until_message])); ?>
+<?php render_template('styles'); ?>
 
 
