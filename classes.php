@@ -2,17 +2,10 @@
 
 class SuperHero
 {
-    //Propiedades y los métdos
-    public $name;
-    public $powers;
-    public $planet;
+    // Propiedades y los métodos
+    // Promoted properties -> desde PHP 8
+    public function __construct(public $name, public $powers, public $planet) {}
 
-    public function __construct($name, $powers, $planet)
-    {
-        $this->name = $name;
-        $this->powers = $powers;
-        $this->planet = $planet;
-    }
     public function attack()
     {
         return "¡$this->name ataca con sus poderes!";
